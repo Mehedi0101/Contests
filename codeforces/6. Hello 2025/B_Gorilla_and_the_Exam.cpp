@@ -30,7 +30,6 @@ int main(){
         vector<pl> v;
         for(auto [key,val]:mp) v.push_back({key,val});
         sort(v.begin(),v.end(),cmp);
-        // for(pl x:v) cout << x.first << " " << x.second << endl;
         ll ans = v.size(), rm = 0;
         for(ll i=0; i<v.size()&&k>0; i++){
             if(v[i].second <= k){
