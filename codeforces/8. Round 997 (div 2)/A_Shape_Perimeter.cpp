@@ -29,20 +29,16 @@ int main(){
             if(i == 0 && n != 1){
                 next = (m-v[i+1].first)+(m-v[i+1].second);
                 ans += peri-next;
-                // cout << next << " -> " << ans << endl;
             }
             else if(i == n-1){
                 prev = next;
                 ans += peri-prev;
-                // cout << prev << " -> " << ans << endl;
             }
             else{
                 prev = next;
                 next = m-v[i+1].first+m-v[i+1].second;
                 ans += peri-prev-next;
-                // cout << prev << " -> " << next << " -> " << ans << endl;
             }
-            // cout << ans << endl;
         }
         cout << ans << endl;
     }
